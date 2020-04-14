@@ -14,14 +14,19 @@
 
 function reverse(arr) {
 
-  for (let i = 0; i <= Math.floor((arr.length - 1) / 2); i++) {
+  for (let i = 0; i < (arr.length / 2); i++) {
 
-      let el = arr[i];
-      arr[i] = arr[arr.length - 1 - i];
-      arr[arr.length - 1 - i] = el;
+    let el = arr[i];
 
-      console.log(arr);
+    console.log(el);
+
+    arr[i] = arr[arr.length - 1 - i];
+
+    console.log(arr[i]);
+    arr[arr.length - 1 - i] = el;
   }
-}
 
-reverse([1,4,6,10,3,9]);
+  return console.log(arr);
+} 
+
+reverse([1,2,3,4,5,6]);
